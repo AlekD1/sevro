@@ -33,7 +33,8 @@ urlpatterns = [
     path('api/statistic/', StatisticListAPIView.as_view()),
     path('api/figures/', FiguresListAPIView.as_view()),
     path('api/partners/', PartnerListAPIView.as_view()),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
 
 urlpatterns += doc_urls
 urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
