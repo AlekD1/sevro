@@ -1,0 +1,12 @@
+@import "../../css/colors";
+@import "../../css/breakpoints";
+
+.StatisticsBlock {
+	&__value {
+		font-size: 64px;
+		font-weight: 800;
+		line-height: 130%;
+		text-align: left;
+		color: $color-primary;
+	}
+}

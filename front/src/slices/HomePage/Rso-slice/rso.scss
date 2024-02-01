@@ -1,0 +1,161 @@
+@import "../../../css/colors";
+@import "../../../css/breakpoints";
+@import "../../../css/other";
+
+.Rso-slice {
+	@include marginslice(80px);
+
+	.Rso-slice-container {
+		padding-top: 16px;
+		padding-bottom: 16px;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		column-gap: 58px;
+
+		.Rso-slice__info {
+			&__header {
+				@include font-title-italic;
+				margin-bottom: 8px;
+			}
+
+			&__title {
+				color: $color-primary;
+				margin-bottom: 33px;
+				@include font-title;
+				width: 560px;
+			}
+
+			&__description {
+				font-size: 20px;
+				margin-bottom: 24px;
+				line-height: 130%;
+				width: 560px;
+			}
+
+			&__button {
+				&__stylebtn {
+					font-weight: 500;
+					display: inline-flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 8px 16px;
+					text-align: left;
+					gap: 32px;
+					width: 210px;
+					border-radius: 10px;
+					border: 2px solid rgba(0, 0, 0, 0.2);
+					background: $color-primary;
+					outline: none;
+					color: $color-white;
+					font-family: Montserrat;
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: normal;
+					cursor: pointer;
+					transition: 0.3s;
+				}
+			}
+
+			&__button__stylebtn:hover {
+				background: $color-secondary;
+			}
+
+			&__button__stylebtn:active {
+				background: $color-rarly;
+				box-shadow: -4px -4px 8px 0px rgba(255, 255, 255, 0.25) inset,
+					4px 4px 8px 0px rgba(0, 0, 0, 0.25) inset;
+			}
+		}
+
+		.Rso-slice__blocks {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+			justify-content: center;
+			min-width: 344px;
+			align-items: flex-end;
+		}
+	}
+}
+
+@media (max-width: $breakpoint_xxl) {
+	.Rso-slice {
+		.Rso-slice-container {
+			.Rso-slice__info {
+				&__header {
+					width: 100%;
+				}
+
+				&__title {
+					width: 100% !important;
+				}
+
+				&__description {
+					width: 100% !important;
+				}
+
+				&__button {
+					width: 100%;
+
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $breakpoint_l) {
+	.Rso-slice {
+		.Rso-slice-container {
+			flex-direction: column !important;
+			row-gap: 68px !important;
+
+			.Rso-slice__info {
+				order: 1;
+			}
+
+			.Rso-slice__blocks {
+				order: 2;
+			}
+		}
+	}
+}
+
+@media (max-width: $breakpoint_s) {
+	.Rso-slice {
+		@include marginslice(40px);
+
+		.Rso-slice-container {
+			.Rso-slice__info {
+				&__title {
+					font-size: 24px !important;
+				}
+
+				&__description {
+					font-size: 16px !important;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $breakpoint_sm) {
+	.Rso-slice {
+		.Rso-slice-container {
+			.Rso-slice__info {
+				&__title {
+					font-size: 24px !important;
+				}
+
+				&__description {
+					font-size: 16px !important;
+				}
+			}
+
+			.Rso-slice__blocks {
+				min-width: 100% !important;
+			}
+		}
+	}
+}

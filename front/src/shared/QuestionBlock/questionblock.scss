@@ -1,0 +1,91 @@
+@import "../../css/colors";
+@import "../../css/breakpoints";
+
+.QuestionBlock {
+	position: relative;
+	display: flex;
+	width: 580px;
+	align-items: center;
+	border-radius: 10px;
+	background: $color-white;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	/* iOS Safari */
+	-webkit-user-select: none;
+	/* Safari */
+	-khtml-user-select: none;
+	/* Konqueror HTML */
+	-moz-user-select: none;
+	/* Old versions of Firefox */
+	-ms-user-select: none;
+	/* Internet Explorer/Edge */
+	user-select: none;
+
+	&__title {
+		border-radius: 10px;
+		padding: 16px 62px 16px 24px;
+		background: $color-primary;
+		list-style: none;
+		color: $color-white;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&__circle {
+			position: absolute;
+			right: 8px;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background-color: $color-white;
+			-moz-border-radius: 50%;
+			-webkit-border-radius: 50%;
+			-khtml-border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	&__text {
+		width: 100%;
+		word-wrap: break-word;
+	}
+}
+
+details[open] {
+	border-radius: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+
+	p {
+		padding: 16px;
+	}
+
+	.QuestionBlock__title {
+		.QuestionBlock__title__circle {
+			img {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+
+@media (max-width: $breakpoint_m) {
+	.QuestionBlock {
+		width: 100% !important;
+
+		&__title {
+			font-size: 16px !important;
+		}
+		&__text {
+			font-size: 16px !important;
+		}
+	}
+}
+
+@media (max-width: $breakpoint_s) {
+	.QuestionBlock {
+		&__title {
+			column-gap: 40px !important;
+		}
+	}
+}

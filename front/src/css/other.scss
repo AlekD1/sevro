@@ -1,0 +1,20 @@
+@mixin marginslice($px) {
+  margin-bottom: $px;
+}
+
+@mixin font-title {
+  font-family: Gotham;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  text-transform: capitalize;
+}
+
+@mixin font-title-italic {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+}

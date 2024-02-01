@@ -1,0 +1,64 @@
+@import "../../css/colors";
+@import "../../css/breakpoints";
+
+.News-card {
+	width: 280px;
+	height: 400px;
+	border-radius: 15px;
+	background: $color-white;
+	cursor: pointer;
+	overflow: hidden;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+
+	a {
+		text-decoration: none;
+	}
+
+	&__photo {
+		width: 280px;
+		height: 150px;
+		border-radius: 15px 15px 0px 0px;
+		transition: 0.4s;
+		z-index: 1;
+		position: relative;
+		img {
+			z-index: -2;
+			object-fit: cover;
+		}
+	}
+	&__text {
+		padding-top: 8px;
+		padding-left: 12px;
+		padding-right: 12px;
+		padding-bottom: 10px;
+	}
+	&__title {
+		margin-bottom: 12px;
+		font-size: 20px;
+		font-weight: 600;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	&__description {
+		color: var(--txt-dark, #1a1a1a);
+		font-family: Montserrat;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 110%;
+		display: -webkit-box;
+		-webkit-line-clamp: 11;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+}
+
+//.News-card:hover {
+//	box-shadow: 0px 0px 8px 0px rgba(0, 120, 183, 0.25);
+//}
+//
+//.News-card:active {
+//	box-shadow: 4px 4px 8px 0px rgba(255, 255, 255, 0.25),
+//		-4px -4px 8px 0px rgba(0, 0, 0, 0.5);
+//}

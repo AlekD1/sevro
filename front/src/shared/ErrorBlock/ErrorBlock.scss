@@ -1,0 +1,120 @@
+@import "../../css/global";
+
+@media (max-width: $breakpoint_m) {
+	.ErrorBlock {
+		&-container {
+			&_icon {
+			}
+
+			&_text {
+				&_error-name {
+					font-size: 86px !important;
+				}
+
+				&_notfound {
+					font-size: 22px !important;
+				}
+
+				&_description {
+					font-size: 15px !important;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $breakpoint_s) {
+	.ErrorBlock {
+		&-container {
+			&_icon {
+				.ErrorBlock-container_photo {
+					display: none;
+				}
+			}
+
+			&_text {
+				&_error-name {
+					font-size: 86px !important;
+
+					.ErrorBlock-container_photo {
+						display: block !important;
+						width: 65px;
+					}
+				}
+
+				&_notfound {
+					font-size: 22px !important;
+				}
+
+				&_description {
+					font-size: 15px !important;
+				}
+			}
+		}
+	}
+}
+
+.ErrorBlock-container {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	column-gap: 16px;
+
+	&_photo {
+		opacity: 65%;
+		width: 310px;
+	}
+
+	&_text {
+		display: flex;
+		flex-wrap: wrap;
+		width: 466px;
+		justify-content: center;
+		align-content: center;
+		gap: 8px;
+
+		&_error-name {
+			color: var(--primary, #0078b7);
+			font-family: Gotham;
+			font-size: 96px;
+			font-style: normal;
+
+			justify-content: center;
+			display: flex;
+			flex-direction: row;
+			font-weight: 700;
+			line-height: 70%;
+
+			.ErrorBlock-container_photo {
+				display: none;
+			}
+		}
+
+		&_notfound {
+			color: var(--primary, #0078b7);
+			text-align: center;
+			font-family: Gotham;
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+		}
+
+		&_description {
+			color: var(--primary, #0078b7);
+			text-align: center;
+			font-family: Montserrat;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 400;
+
+			line-height: normal;
+
+			&_link {
+				text-decoration: underline;
+			}
+		}
+	}
+}

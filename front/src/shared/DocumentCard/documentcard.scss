@@ -1,0 +1,45 @@
+@import "../../css/colors";
+@import "../../css/breakpoints";
+
+
+.Document-Card {
+	max-width: 580px;
+	&__content {
+		display: flex;
+		cursor: pointer;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: 40px;
+		text-align: left;
+		padding: 16px;
+
+		border-radius: 10px;
+		border: 2px solid rgba(0, 0, 0, 0.2);
+		background: $color-white;
+
+		svg {
+			width: 5vw;
+			max-height: 72px;
+			max-width: 72px;
+		}
+
+		p {
+			color: #000;
+			font-family: Montserrat;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			text-transform: uppercase;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.Document-Card {
+			p {
+				width: 9vw;
+				font-size: 16px;
+			}
+	}
+}

@@ -1,0 +1,22 @@
+@import "../../css/colors";
+@import "../../css/breakpoints";
+@import "../../css/other";
+
+
+.Document-slice {
+	margin-bottom: 80px;
+
+	&__header {
+		@include font-title-italic;
+		margin-bottom: 8px;
+	}
+
+	&-container {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+	}
+}

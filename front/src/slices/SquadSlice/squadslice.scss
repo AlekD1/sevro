@@ -1,0 +1,38 @@
+@import "../../css/colors";
+@import "../../css/breakpoints";
+@import "../../css/other";
+
+
+.Squad-slice {
+	margin-bottom: 80px;
+	padding: 16px 0px;
+	&__cards-list {
+		display: flex;
+		flex-direction: row;
+		gap: 2vw;
+		flex-wrap: wrap;
+		justify-content: center;
+		transition: all 0.3s;
+
+	}
+	&__title {
+		@include font-title-italic;
+		margin-bottom: 8px;
+	}
+}
+
+
+.Masonry-grid {
+	gap: 20px !important;
+	div {
+		gap: 20px !important;
+	}
+}
+
+@media (max-width: $breakpoint_s) {
+	.Masonry-grid {
+		div {
+			gap: 16px !important;
+		}
+	}
+}

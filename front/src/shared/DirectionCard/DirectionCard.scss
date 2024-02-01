@@ -1,0 +1,81 @@
+@import "../../css/colors";
+@import "../../css/breakpoints";
+
+
+.DirectionCard:hover .DirectionCard__overlay__style {
+	position: relative;
+	transform: rotate(-30deg);
+	z-index: 12;
+}
+
+.DirectionCard:hover .DirectionCard__overlay {
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.DirectionCard {
+	width: 180px;
+	height: 180px;
+	border-radius: 10px;
+	box-shadow: 4px 4px 8px 0px rgba(255, 255, 255, 0.25), -4px -4px 8px 0px rgba(0, 0, 0, 0.5);
+	z-index: 11;
+	position: relative;
+	transition: 0.3s;
+	cursor: pointer;
+
+	.DirectionCard__style {
+		border-radius: 10px;
+		width: 100%;
+		height: 100%;
+	}
+
+	.DirectionCard__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 1;
+		transition: 0.3 ease;
+		background: rgba(0, 0, 0, 0.8);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 10px;
+		z-index: 2;
+	}
+}
+
+.DirectionCard__overlay__style {
+	position: relative;
+	z-index: 3;
+	transition: all 0.3s;
+	width: 70%;
+}
+
+.active {
+	scale: (1.1);
+
+	.DirectionCard__overlay {
+		opacity: 0 !important;
+	}
+}
+
+@media (max-width: $breakpoint_xxl) {
+	.DirectionCard {
+		width: 120px;
+		height: 120px;
+	}
+
+	.active {
+		scale: (1.05);
+	}
+}
+
+@media (max-width: $breakpoint_m) {
+	.DirectionCard {
+		width: 65px;
+		height: 65px;
+	}
+}
