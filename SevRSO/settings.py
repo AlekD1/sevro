@@ -142,7 +142,7 @@ STATIC_ROOT =  os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 # Media
 
 MEDIA_URL = 'media/'
-MEDIA_ROOT = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'media_root')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
